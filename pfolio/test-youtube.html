@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Banc d'essai YouTube — SÉQUENCE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400&display=swap" rel="stylesheet" />
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0b0b0d;--panel:#131317;--panel2:#1a1a20;--line:#2b2b34;
+    --accent:#ff4b1f;--ok:#5ddb8f;--ko:#ff5a4d;--warn:#ffc44d;
+    --txt:#e9e9ec;--txt2:#9a9aa6;--txt3:#62626e;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --disp:'Barlow Condensed',sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  body{background:var(--bg);color:var(--txt);font-family:var(--body);font-size:15px;line-height:1.6;padding:32px 24px 80px}
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5vw,60px);line-height:.9;text-transform:uppercase;letter-spacing:-.02em}
+  .sub{color:var(--txt2);font-size:14px;margin-top:10px;max-width:70ch}
+  .mono{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+  .env{margin:26px 0;border:1px solid var(--line);background:var(--panel)}
+  .env-h{padding:10px 14px;background:var(--panel2);border-bottom:1px solid var(--line);color:var(--txt2)}
+  .env-row{display:flex;justify-content:space-between;gap:16px;padding:10px 14px;border-bottom:1px solid #1f1f26;font-family:var(--mono);font-size:11px}
+  .env-row:last-child{border-bottom:none}
+  .env-row .k{color:var(--txt3)}
+  .env-row .v{text-align:right;word-break:break-all}
+
+  .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:22px 0}
+  input[type=text]{flex:1;min-width:280px;padding:12px 14px;background:var(--panel);border:1px solid var(--line);color:var(--txt);font-family:var(--mono);font-size:12px}
+  input[type=text]:focus{outline:2px solid var(--accent);outline-offset:2px}
+  button{padding:12px 20px;background:var(--accent);border:1px solid var(--accent);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+  button.ghost{background:transparent;color:var(--txt2);border-color:var(--line)}
+  button:hover{filter:brightness(1.12)}
+
+  .verdict{margin:22px 0;padding:20px 22px;border:1px solid var(--line);background:var(--panel);border-left:3px solid var(--accent)}
+  .verdict h2{font-family:var(--disp);font-size:26px;text-transform:uppercase;margin-bottom:8px}
+  .verdict p{color:var(--txt2);font-size:14px}
+  .verdict code{display:block;margin-top:12px;padding:12px;background:#0e0e11;border:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--txt);white-space:pre-wrap}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:26px}
+  .card{border:1px solid var(--line);background:var(--panel);overflow:hidden}
+  .card-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:var(--panel2);border-bottom:1px solid var(--line)}
+  .card-h .nm{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--txt)}
+  .badge{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--line);color:var(--txt3);white-space:nowrap}
+  .badge[data-s="ok"]{color:var(--ok);border-color:var(--ok)}
+  .badge[data-s="ko"]{color:var(--ko);border-color:var(--ko)}
+  .badge[data-s="wait"]{color:var(--warn);border-color:var(--warn)}
+  .frame{position:relative;aspect-ratio:16/9;background:#000}
+  .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .card-f{padding:10px 12px;font-family:var(--mono);font-size:9.5px;color:var(--txt3);word-break:break-all;line-height:1.5;border-top:1px solid #1f1f26}
+  .note{margin-top:8px;font-family:var(--body);font-size:12px;color:var(--txt2);line-height:1.5}
+  .legend{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--txt3);font-size:13px}
+  .legend b{color:var(--txt2);font-weight:400}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Banc d'essai<br>YouTube</h1>
+  <p class="sub">Cette page teste la même vidéo à travers plusieurs façons de l'intégrer, et détecte
+  laquelle démarre réellement. Elle ne dépend d'aucun autre fichier du site. Elle sert uniquement au
+  diagnostic : supprimez-la avant la mise en ligne.</p>
+
+  <div class="env">
+    <div class="env-h mono">Environnement</div>
+    <div class="env-row"><span class="k">ADRESSE DE LA PAGE</span><span class="v" id="e-url">—</span></div>
+    <div class="env-row"><span class="k">PROTOCOLE</span><span class="v" id="e-proto">—</span></div>
+    <div class="env-row"><span class="k">ORIGINE ENVOYÉE À YOUTUBE</span><span class="v" id="e-origin">—</span></div>
+    <div class="env-row"><span class="k">API IFRAME YOUTUBE</span><span class="v" id="e-api">chargement…</span></div>
+  </div>
+
+  <div class="bar">
+    <input type="text" id="vid" value="K5nq2GuaPBQ" aria-label="Identifiant ou lien YouTube" />
+    <button type="button" id="run">Relancer les tests</button>
+    <button type="button" class="ghost" id="control">Tester une vidéo témoin</button>
+  </div>
+
+  <div class="verdict" id="verdict">
+    <h2 id="v-title">Test en cours…</h2>
+    <p id="v-text">Les lecteurs se chargent. Le verdict s'affiche dans quelques secondes.</p>
+    <code id="v-code" hidden></code>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <p class="legend">
+    <b>Comment lire :</b> une vignette qui affiche l'image de la vidéo et démarre = variante valide.
+    Une vignette noire avec « Vidéo non disponible » = YouTube refuse cette combinaison.
+    Si <b>toutes</b> les variantes échouent, y compris la vidéo témoin, le problème vient de
+    l'environnement (protocole <code>file://</code>, bloqueur de publicité, réseau filtré).
+    Si la vidéo témoin passe mais pas la vôtre, le problème vient des réglages de votre vidéo.
+  </p>
+</div>
+
+<script>
+/* Vidéo témoin : Big Buck Bunny, licence libre, intégrable partout */
+var CONTROL = 'aqz-KE-bpKQ';
+
+function parseId(v){
+  v = (v||'').trim();
+  if (/^[\w-]{11}$/.test(v)) return v;
+  try{
+    var u = new URL(v, location.href);
+    var h = u.hostname.replace(/^www\.|^m\./,'');
+    if (h === 'youtu.be') return u.pathname.split('/').filter(Boolean)[0] || '';
+    var q = u.searchParams.get('v');
+    if (q) return q;
+    var p = u.pathname.split('/').filter(Boolean);
+    if (['embed','shorts','live','v'].indexOf(p[0]) > -1) return p[1] || '';
+  }catch(e){}
+  return '';
+}
+
+var ORIGIN = (location.protocol === 'http:' || location.protocol === 'https:') ? location.origin : null;
+
+document.getElementById('e-url').textContent = location.href;
+document.getElementById('e-proto').textContent = location.protocol;
+document.getElementById('e-origin').textContent = ORIGIN || 'aucune (page ouverte en fichier local)';
+
+/* Les variantes testées, de la plus simple à la plus complète */
+function variants(id){
+  return [
+    { key:'A', nm:'A · youtube.com, sans option',
+      host:'https://www.youtube.com', params:{} },
+    { key:'B', nm:'B · youtube.com + autoplay muet',
+      host:'https://www.youtube.com', params:{autoplay:1, mute:1} },
+    { key:'C', nm:'C · réglage du site (sans boucle)',
+      host:'https://www.youtube.com', params:{autoplay:1, mute:1, controls:0, disablekb:1, fs:0, rel:0, modestbranding:1, playsinline:1} },
+    { key:'D', nm:'D · avec boucle façon playlist',
+      host:'https://www.youtube.com', params:{autoplay:1, mute:1, loop:1, playlist:id} },
+    { key:'E', nm:'E · domaine sans cookie',
+      host:'https://www.youtube-nocookie.com', params:{autoplay:1, mute:1} },
+    { key:'F', nm:'F · sans cookie + boucle playlist',
+      host:'https://www.youtube-nocookie.com', params:{autoplay:1, mute:1, loop:1, playlist:id} }
+  ];
+}
+
+var results = {};
+var players = [];
+
+function build(id){
+  results = {};
+  players.forEach(function(p){ try{ p.destroy(); }catch(e){} });
+  players = [];
+
+  var grid = document.getElementById('grid');
+  grid.innerHTML = '';
+
+  var list = variants(id).concat([{
+    key:'T', nm:'T · vidéo témoin (référence)', control:true,
+    host:'https://www.youtube.com', params:{autoplay:1, mute:1}
+  }]);
+
+  list.forEach(function(v){
+    var vid = v.control ? CONTROL : id;
+    var p = Object.assign({enablejsapi:1}, v.params);
+    if (ORIGIN) p.origin = ORIGIN;
+    var qs = Object.keys(p).map(function(k){ return k+'='+encodeURIComponent(p[k]); }).join('&');
+    var src = v.host + '/embed/' + encodeURIComponent(vid) + '?' + qs;
+
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML =
+      '<div class="card-h"><span class="nm">'+v.nm+'</span>'+
+      '<span class="badge" data-s="wait" id="b-'+v.key+'">attente</span></div>'+
+      '<div class="frame"><iframe id="f-'+v.key+'" allow="autoplay; encrypted-media" '+
+      'referrerpolicy="strict-origin-when-cross-origin" src="'+src+'"></iframe></div>'+
+      '<div class="card-f">'+src.replace(/&/g,' &')+'</div>';
+    grid.appendChild(card);
+
+    results[v.key] = { nm:v.nm, control:!!v.control, status:'wait', src:src };
+  });
+
+  if (window.YT && window.YT.Player) attach(list);
+  else pendingAttach = list;
+
+  // Si l'API ne répond pas, on laisse l'utilisateur juger à l'œil
+  setTimeout(function(){
+    Object.keys(results).forEach(function(k){
+      if (results[k].status === 'wait') {
+        results[k].status = 'unknown';
+        setBadge(k, 'wait', 'à vérifier à l’œil');
+      }
+    });
+    verdict();
+  }, 9000);
+}
+
+var pendingAttach = null;
+
+function setBadge(key, s, txt){
+  var b = document.getElementById('b-'+key);
+  if (!b) return;
+  b.setAttribute('data-s', s);
+  b.textContent = txt;
+}
+
+function errText(code){
+  switch(Number(code)){
+    case 2:   return 'identifiant invalide';
+    case 5:   return 'erreur lecteur HTML5';
+    case 100: return 'vidéo introuvable / privée';
+    case 101:
+    case 150: return 'intégration désactivée';
+    default:  return 'erreur ' + code;
+  }
+}
+
+function attach(list){
+  list.forEach(function(v){
+    var el = document.getElementById('f-'+v.key);
+    if (!el) return;
+    try{
+      var pl = new YT.Player(el, {
+        events:{
+          onReady: function(){
+            if (results[v.key].status === 'wait' || results[v.key].status === 'unknown'){
+              results[v.key].status = 'ok';
+              setBadge(v.key, 'ok', 'fonctionne');
+              verdict();
+            }
+          },
+          onError: function(e){
+            results[v.key].status = 'ko';
+            results[v.key].code = e.data;
+            setBadge(v.key, 'ko', errText(e.data));
+            verdict();
+          }
+        }
+      });
+      players.push(pl);
+    }catch(e){}
+  });
+}
+
+function verdict(){
+  var keys = Object.keys(results);
+  var done = keys.filter(function(k){ return results[k].status !== 'wait'; });
+  if (done.length < keys.length) return;
+
+  var ctrl = results['T'];
+  var mine = keys.filter(function(k){ return k !== 'T'; });
+  var working = mine.filter(function(k){ return results[k].status === 'ok'; });
+  var failing = mine.filter(function(k){ return results[k].status === 'ko'; });
+
+  var t = document.getElementById('v-title');
+  var p = document.getElementById('v-text');
+  var c = document.getElementById('v-code');
+  c.hidden = true;
+
+  if (ctrl && ctrl.status === 'ko'){
+    t.textContent = 'Le problème vient de l’environnement';
+    p.innerHTML = 'Même la vidéo témoin est refusée. Ce n’est donc pas votre vidéo. Causes probables : '+
+      'la page est ouverte en <code>file://</code> au lieu d’un serveur, un bloqueur de publicité filtre YouTube, '+
+      'ou le réseau bloque le lecteur. Vérifiez la ligne « protocole » en haut : elle doit indiquer '+
+      '<code>http:</code> ou <code>https:</code>, jamais <code>file:</code>.';
+    return;
+  }
+
+  if (working.length === 0){
+    var code = null;
+    failing.forEach(function(k){ if (results[k].code) code = results[k].code; });
+    t.textContent = 'Le problème vient de cette vidéo';
+    p.innerHTML = 'La vidéo témoin fonctionne, la vôtre non : le blocage est dans les réglages de la vidéo'+
+      (code ? ' (code ' + code + ' — ' + errText(code) + ')' : '') + '. '+
+      'Dans YouTube Studio : la vidéo → <b>Modifier</b> → <b>Afficher plus</b> → <b>Autres options</b> → cochez '+
+      '<b>« Autoriser l’intégration »</b>. Vérifiez aussi qu’elle n’est pas en <b>privée</b> '+
+      '(non répertoriée convient) ni marquée « contenu destiné aux enfants », ce qui interdit l’intégration.';
+    return;
+  }
+
+  t.textContent = 'Variante(s) qui fonctionnent : ' + working.join(', ');
+  var host = results[working[0]].src.indexOf('nocookie') > -1
+    ? 'www.youtube-nocookie.com' : 'www.youtube.com';
+  var loopBroken = mine.some(function(k){
+    return (k === 'D' || k === 'F') && results[k].status === 'ko';
+  });
+  p.innerHTML = 'Le domaine à utiliser est <b>' + host + '</b>.' +
+    (loopBroken ? ' La boucle façon playlist échoue sur cette vidéo : le site ne l’utilise plus, il boucle via l’API.' : '');
+  c.hidden = false;
+  c.textContent = '"meta": { "youtubeHost": "' + host + '" }';
+}
+
+/* Chargement de l'API */
+window.onYouTubeIframeAPIReady = function(){
+  document.getElementById('e-api').textContent = 'chargée';
+  if (pendingAttach){ attach(pendingAttach); pendingAttach = null; }
+};
+(function(){
+  var s = document.createElement('script');
+  s.src = 'https://www.youtube.com/iframe_api';
+  s.onerror = function(){
+    document.getElementById('e-api').textContent = 'BLOQUÉE (bloqueur de publicité ?)';
+  };
+  document.head.appendChild(s);
+  setTimeout(function(){
+    var n = document.getElementById('e-api');
+    if (n.textContent === 'chargement…') n.textContent = 'aucune réponse — probablement bloquée';
+  }, 6000);
+})();
+
+document.getElementById('run').addEventListener('click', function(){
+  var id = parseId(document.getElementById('vid').value);
+  if (!id){ alert('Lien ou identifiant YouTube non reconnu.'); return; }
+  document.getElementById('v-title').textContent = 'Test en cours…';
+  document.getElementById('v-text').textContent = 'Les lecteurs se chargent.';
+  document.getElementById('v-code').hidden = true;
+  build(id);
+});
+document.getElementById('control').addEventListener('click', function(){
+  document.getElementById('vid').value = CONTROL;
+  document.getElementById('run').click();
+});
+
+build(parseId(document.getElementById('vid').value));
+</script>
+</body>
+</html>

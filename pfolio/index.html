@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="site-title">Portfolio</title>
+  <meta name="description" id="meta-desc" content="" />
+  <meta name="theme-color" content="#0b0b0d" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- ═══ DÉMARRAGE : conform des médias ═══ -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <div class="boot-row">
+        <span class="mono">Conform des médias</span>
+        <span class="mono" id="boot-pct">00%</span>
+      </div>
+      <div class="boot-bar"><div class="boot-fill" id="boot-fill"></div></div>
+      <div class="boot-file" id="boot-file">initialisation…</div>
+    </div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ═══ CURSEUR ═══ -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-label" id="cursor-label"></div>
+  </div>
+
+  <!-- ═══ BARRE SUPÉRIEURE ═══ -->
+  <header class="topbar" role="banner">
+    <a href="#monitor" class="tb-brand" aria-label="Retour en haut">
+      <span class="rec-dot" aria-hidden="true"></span>
+      <span class="tb-initials" id="tb-initials"></span>
+    </a>
+    <span class="tb-seq" id="tb-seq"></span>
+    <span class="tb-spacer"></span>
+    <nav class="tb-nav" id="tb-nav" aria-label="Navigation principale"></nav>
+    <span class="tb-tc tc" id="tb-tc">00:00:00:00</span>
+    <button class="tb-burger" id="tb-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" data-open="false" aria-label="Menu mobile"></nav>
+
+  <!-- ═══ CONTENU ═══ -->
+  <main class="stage" id="stage">
+
+    <!-- ── 01 · MONITEUR PROGRAMME ── -->
+    <section class="section monitor" id="monitor" aria-label="Présentation">
+      <div class="wrap">
+        <div class="mon-grid">
+
+          <div class="mon-frame">
+            <div class="mon-bar">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="lbl" id="mon-src-name">MONITEUR PROGRAMME</span>
+              <span class="right">
+                <span id="mon-fit">FIT 100%</span>
+                <span id="mon-quality">QUALITÉ · COMPLÈTE</span>
+              </span>
+            </div>
+
+            <div class="mon-video-wrap">
+              <video class="mon-video" id="mon-video" autoplay muted loop playsinline aria-hidden="true"></video>
+              <div class="mon-scan" aria-hidden="true"></div>
+              <div class="mon-veil" aria-hidden="true"></div>
+              <div class="mon-guides" aria-hidden="true"><i></i><i></i><b></b><b></b><b></b><b></b></div>
+
+              <div class="mon-osd" aria-hidden="true">
+                <span class="rec"><i></i> REC</span>
+                <span class="tc" id="mon-osd-tc">00:00:00:00</span>
+              </div>
+
+              <div class="mon-title">
+                <p class="mon-eyebrow">
+                  <span id="hero-tagline"></span>
+                  <span class="sep" aria-hidden="true"></span>
+                  <span id="hero-location"></span>
+                  <span class="avail" id="hero-avail" hidden><i aria-hidden="true"></i><span id="hero-avail-label"></span></span>
+                </p>
+                <h1 class="mon-name" id="hero-name"></h1>
+                <div class="mon-actions" id="hero-actions"></div>
+              </div>
+            </div>
+
+            <div class="mon-transport">
+              <div class="grp">
+                <button class="tp-btn" id="mon-prev" aria-label="Revenir au début" type="button">
+                  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h2v12H4zM14 2v12L6 8z"/></svg>
+                </button>
+                <button class="tp-btn" id="mon-play" aria-label="Lecture / pause" type="button">
+                  <svg viewBox="0 0 16 16" aria-hidden="true" id="mon-play-icon"><path d="M4 2h3v12H4zM9 2h3v12H9z"/></svg>
+                </button>
+                <button class="tp-btn" id="mon-mute" aria-label="Activer le son" type="button">
+                  <svg viewBox="0 0 16 16" aria-hidden="true" id="mon-mute-icon"><path d="M8 2 4.5 5H2v6h2.5L8 14z"/></svg>
+                </button>
+              </div>
+
+              <div class="vol">
+                <input type="range" id="mon-vol" min="0" max="100" value="0" step="1"
+                       aria-label="Volume du showreel" />
+              </div>
+
+              <span class="tc" id="mon-cur">00:00</span>
+              <div class="rail" id="mon-rail" role="presentation"><div class="fill" id="mon-fill"></div></div>
+              <span class="tc" id="mon-dur">00:00</span>
+
+              <button class="tp-btn" id="mon-full" aria-label="Passer en plein écran" type="button">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h5v2H4v3H2zM14 2v5h-2V4H9V2zM2 9h2v3h3v2H2zM12 9h2v5H9v-2h3z"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <aside class="mon-specs" aria-label="Caractéristiques du média">
+            <h2>Source · Métadonnées</h2>
+            <div id="spec-list"></div>
+            <div class="mon-vu">
+              <div class="lbl">NIVEAUX AUDIO</div>
+              <div class="vu-bars" id="vu-bars" aria-hidden="true"></div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 02 · RACK D'EFFETS ── -->
+    <section class="section rack" id="rack" aria-label="Profil et compétences">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div class="sec-head-l">
+            <span class="sec-index">02 / FX</span>
+            <h2 class="sec-title" id="rack-title"></h2>
+          </div>
+          <p class="sec-sub" id="rack-sub"></p>
+        </div>
+
+        <div class="rack-grid">
+          <div class="rack-src rv">
+            <div class="rack-src-head"><span>CLIP SOURCE · 01</span></div>
+            <div class="rack-photo-wrap" id="rack-visual">
+              <img class="rack-photo" id="rack-photo" src="" alt="" loading="lazy" hidden />
+              <div class="rack-photo-veil" aria-hidden="true"></div>
+              <span class="rack-photo-tc" aria-hidden="true">IN 00:00:00:00</span>
+            </div>
+            <div class="rack-stats" id="rack-stats"></div>
+          </div>
+
+          <div class="rack-main">
+            <div class="rack-note rv rv-1">
+              <h3 id="rack-note-title"></h3>
+              <p id="rack-bio"></p>
+            </div>
+
+            <div class="rack-fx rv rv-2">
+              <div class="rack-fx-head">
+                <span id="rack-fx-title"></span>
+                <span id="rack-fx-count"></span>
+              </div>
+              <div class="fx-list" id="fx-list" role="list"></div>
+            </div>
+
+            <div class="rack-cta rv rv-3" id="rack-cta"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 03 · TIMELINE ── -->
+    <section class="section timeline-sec" id="timeline" aria-label="Projets">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div class="sec-head-l">
+            <span class="sec-index">03 / V1</span>
+            <h2 class="sec-title" id="tl-title"></h2>
+          </div>
+          <p class="sec-sub" id="tl-sub"></p>
+        </div>
+
+        <div class="tl-frame rv" id="tl-frame">
+
+          <div class="tl-bar">
+            <span class="tl-bar-tool" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M3 1.5l9.5 6.2-4 .6 2.3 4.4-1.7.9-2.3-4.4L3 12.6z"/></svg>
+              OUTIL SÉLECTION
+            </span>
+            <span class="tl-bar-cta" id="tl-cta">
+              <span class="pulse" aria-hidden="true"></span>
+              <span id="tl-cta-text">Cliquez un clip pour ouvrir le projet</span>
+            </span>
+          </div>
+
+          <div class="tl" id="tl">
+            <div class="tl-heads" id="tl-heads">
+              <div class="tl-corner">PISTES</div>
+            </div>
+            <div class="tl-scroll" id="tl-scroll" tabindex="0" aria-label="Timeline des projets, défilement horizontal">
+              <div class="tl-inner" id="tl-inner">
+                <div class="tl-ruler" id="tl-ruler" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tl-foot">
+          <span class="tl-hint">
+            Glisser pour naviguer · <kbd>MAJ</kbd> + molette · <kbd>←</kbd> <kbd>→</kbd> au clavier
+          </span>
+          <span class="tl-zoom">
+            <span id="tl-count"></span>
+            <button type="button" id="tl-out" aria-label="Dézoomer la timeline">−</button>
+            <button type="button" id="tl-in" aria-label="Zoomer la timeline">+</button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 · LIVRAISON ── -->
+    <section class="section deliver" id="deliver" aria-label="Contact">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div class="sec-head-l">
+            <span class="sec-index">04 / EX</span>
+            <h2 class="sec-title" id="del-title"></h2>
+          </div>
+          <p class="sec-sub" id="del-sub"></p>
+        </div>
+
+        <div class="deliver-panel rv rv-1">
+          <div class="deliver-head"><span>FILE D'ATTENTE D'EXPORT</span></div>
+          <div class="deliver-body">
+            <div class="deliver-l">
+              <p class="deliver-k">DESTINATION PRINCIPALE</p>
+              <a class="deliver-mail" id="del-mail" href="#"></a>
+              <div class="deliver-actions" id="del-actions"></div>
+            </div>
+            <div class="deliver-r" id="del-socials" role="list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="load-error" class="wrap" hidden>
+      <div class="load-error">
+        <h2>Médias hors ligne</h2>
+        <p>Impossible de charger <strong>data.json</strong>. Ouvrez le site via un serveur local plutôt qu'en double-cliquant sur le fichier.</p>
+        <code>python3 -m http.server 8080</code>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot" role="contentinfo">
+    <span id="foot-credit"></span>
+    <span id="foot-right"></span>
+  </footer>
+
+  <!-- ═══ DOCK BAS ═══ -->
+  <div class="dock" aria-hidden="true">
+    <div class="dock-transport">
+      <button class="tp-btn" id="dk-top" type="button" aria-label="Aller au début">
+        <svg viewBox="0 0 16 16"><path d="M4 2h2v12H4zM14 2v12L6 8z"/></svg>
+      </button>
+      <button class="tp-btn" id="dk-end" type="button" aria-label="Aller à la fin">
+        <svg viewBox="0 0 16 16"><path d="M10 2h2v12h-2zM2 2v12l8-6z"/></svg>
+      </button>
+    </div>
+    <div class="dock-scrub" id="dock-scrub">
+      <div class="dock-progress" id="dock-progress"></div>
+      <div class="dock-ruler" id="dock-ruler"></div>
+      <div class="playhead" id="playhead"></div>
+    </div>
+    <div class="dock-out">
+      <span class="k">DURÉE TOTALE</span>
+      <span class="v" id="dk-total">00:00:00:00</span>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

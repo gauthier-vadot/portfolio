@@ -1,0 +1,787 @@
+{
+  "meta": {
+    "siteTitle": "Gauthier Vadot — MOTION DESIGNER & Monteur Vidéo",
+    "description": "Portfolio de motion design et de montage vidéo. Publicités, courts-métrages, animation en motion design, et plus encore.",
+    "lang": "fr",
+    "initials": "GV",
+    "sequenceName": "PORTFOLIO_GAUTHIER_VADOT_MASTER.seq",
+    "accent": "#ff4b1f"
+  },
+  "nav": [
+    {
+      "label": "Moniteur",
+      "target": "monitor",
+      "code": "V0"
+    },
+    {
+      "label": "Profil",
+      "target": "rack",
+      "code": "FX"
+    },
+    {
+      "label": "Timeline",
+      "target": "timeline",
+      "code": "V1"
+    },
+    {
+      "label": "Contact",
+      "target": "deliver",
+      "code": "EX"
+    }
+  ],
+  "hero": {
+    "firstName": "Gauthier",
+    "lastName": "Vadot",
+    "tagline": "Motion Designer, Monteur Vidéo & Producteur de Film",
+    "location": "Paris, FR",
+    "available": true,
+    "availableLabel": "Disponible pour missions",
+    "ctaLabel": "Ouvrir la timeline",
+    "ctaTarget": "timeline",
+    "showreelUrl": "https://youtu.be/o0RMo2iq9X0",
+    "showreelPoster": "",
+    "specs": [
+      {
+        "key": "SOURCE",
+        "value": "{{title}}"
+      },
+      {
+        "key": "HÉBERGEMENT",
+        "value": "YouTube"
+      },
+      {
+        "key": "QUALITÉ",
+        "value": "{{quality}}"
+      },
+      {
+        "key": "DURÉE",
+        "value": "{{duration}}"
+      },
+      {
+        "key": "POSITION",
+        "value": "{{timecode}}"
+      }
+    ]
+  },
+  "about": {
+    "sectionTitle": "Profil",
+    "sectionSubtitle": "Panneau d'effets — compétences et outils actifs.",
+    "photo": "",
+    "photoAlt": "Monogramme Gauthier Vadot",
+    "bioHeading": "Note de séquence",
+    "bio": "Salut ! Ici vous pourrez retrouver tout mes anciens projets ainsi que mon CV. N'hésitez pas à scroller pour en voir davantage ou afin de me contacter pour un futur projet !",
+    "stats": [
+      {
+        "value": "3",
+        "label": "années de pratique"
+      },
+      {
+        "value": "11",
+        "label": "projets livrés"
+      },
+      {
+        "value": "8",
+        "label": "clients & structures"
+      }
+    ],
+    "skillsHeading": "Rack d'effets",
+    "skills": [
+      {
+        "name": "After Effects",
+        "icon": "assets/icons/ae.svg",
+        "role": "Animation / Compositing"
+      },
+      {
+        "name": "Premiere Pro",
+        "icon": "assets/icons/pr.svg",
+        "role": "Montage"
+      },
+      {
+        "name": "Illustrator",
+        "icon": "assets/icons/ai.svg",
+        "role": "Design / Assets"
+      },
+      {
+        "name": "Figma",
+        "icon": "assets/icons/tb.svg",
+        "role": "Animation traditionnelle"
+      },
+      {
+        "name": "DaVinci Resolve",
+        "icon": "assets/icons/dv.svg",
+        "role": "Étalonnage"
+      },
+      {
+        "name": "Blender",
+        "icon": "assets/icons/bl.svg",
+        "role": "3D / Rendu"
+      },
+      {
+        "name": "Photoshop",
+        "icon": "assets/icons/ps.svg",
+        "role": "Retouche / Assets"
+      },
+      {
+        "name": "Procreate",
+        "icon": "assets/icons/pc.svg",
+        "role": "Illustration / Storyboard"
+      }
+    ],
+    "cvUrl": "assets/CV_Gauthier_VADOT_2026.pdf",
+    "cvLabel": "Exporter le CV"
+  },
+  "portfolio": {
+    "sectionTitle": "Timeline",
+    "sectionSubtitle": "Chaque bloc est un projet. Survolez pour prévisualiser, cliquez pour ouvrir dans le moniteur source.",
+    "hint": "Cliquez sur un clip pour ouvrir un projet",
+    "tracks": [
+      {
+        "id": "V2",
+        "label": "V2",
+        "name": "Animation"
+      },
+      {
+        "id": "V1",
+        "label": "V1",
+        "name": "Montage"
+      }
+    ],
+    "projects": [
+      {
+        "id": "proj-1",
+        "track": "V2",
+        "title": "ONE PROVALLIANCE 2025 - 50ans PROVALLIANCE",
+        "year": "2025",
+        "role": "Motion Designer & Monteur Vidéo",
+        "category": "Alternance",
+        "client": "PROVALLIANCE",
+        "duration": "02:10:33",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#ff4b1f",
+        "tools": [
+          "After Effects",
+          "Premiere Pro",
+          "Illustrator",
+          "Photoshop"
+        ],
+        "context": "Chaque année, le groupe PROVALLIANCE organise un Séminaire/Show coiffure pour son siège ainsi que pour ses collaborateurs et les différents coiffeurs des salons voulant participer aux HAIR BEAUTY AWARDS. Cette année, j'ai eu la chance de monter la quasi totalité des vidéos du séminaire se passant au Centre de Congrès à Lyon pour fêter les 50ans du Groupe PROVALLIANCE.",
+        "videos": [
+          {
+            "youtubeId": "https://youtu.be/jm6EFcMzGIQ",
+            "title": "HBA - Vidéo présentateur",
+            "duration": "01:01",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/67jdBN1hoNU",
+            "title": "HBA - Vidéo YOUNG TALENT",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/25M3gOJzisk",
+            "title": "HBA - Vidéo AVANT-GARDE",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/wIvVnZEWIj0",
+            "title": "HBA - Vidéo AFRO",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/ae2RBPFSC8A",
+            "title": "HBA - Vidéo MEN",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/ogWUqQXnlqA",
+            "title": "HBA - Vidéo LLONGUERAS",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/1WYEFKTWgaA",
+            "title": "HBA - Vidéo L'ATELIER INTERMÈDE",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/fACSqyBPaio",
+            "title": "HBA - Vidéo JEAN LOUIS DAVID",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/0WfXxIEcipA",
+            "title": "HBA - Vidéo FRANCK PROVOST",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/Q6lTTV7r1aE",
+            "title": "HBA - Vidéo COIFF&CO",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/qnXfbC99VPc",
+            "title": "HBA - SAINT ALGUE",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1VjLDiXrL7HSU7e_jRUbqJox4EIi9o8BL/view?usp=sharing",
+            "title": "HAIRDRESSER OF THE YEAR",
+            "duration": "06:05",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/yBygFi1gLhU",
+            "title": "Logo 50 animé",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/RSl9lSAbAZk",
+            "title": "Logo 50 animé 2",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/KV6kVtT9VSY",
+            "title": "Fond animation marques PROVALLIANCE",
+            "duration": "06:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/gzr2Gvrhrgc",
+            "title": "Logo séminaire animé",
+            "duration": "01:01",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/17huRCS83-eV4QwfC8XEhxZNIn5MgM0Ja/view?usp=sharing",
+            "title": "Ouverture animation",
+            "duration": "03:32",
+            "description": "Utilisation d'un fond vidéo extérieur"
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1wzMzLW2IkUoomLvxv4vrTI39H0a_0FTp/view?usp=sharing",
+            "title": "ATELIER ÉDITO DES MARQUES",
+            "duration": "27:06",
+            "description": "Utilisation d'un fond vidéo extérieur"
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1wzMzLW2IkUoomLvxv4vrTI39H0a_0FTp/view?usp=sharing",
+            "title": "SHOW ARTISTIQUE + SHOW FINAL",
+            "duration": "13:14",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1kRLh-3_kkpmyPHaGn7eRTtb-UwBnP0OI/view?usp=sharing",
+            "title": "JINGLE",
+            "duration": "00:34",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": "proj-2",
+        "track": "V1",
+        "title": "CAPRICE — FESTIVAL NIKON",
+        "year": "2025",
+        "role": "Directeur Artistique, Script & aide Production et Montage",
+        "category": "COURT-MÉTRAGE",
+        "client": "NIKON FESTIVAL",
+        "duration": "00:02:20",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#e9c46a",
+        "tools": [
+          "Premiere Pro",
+          "DaVinci Resolve"
+        ],
+        "context": "Participation au FESTIVAL NIKON 2025 avec pour thème : Super-Pouvoir.",
+        "videos": [
+          {
+            "youtubeId": "https://youtu.be/VkfPRtDcYdg",
+            "title": "CAPRICE — FESTIVAL NIKON",
+            "duration": "02:20",
+            "description": "Version diffusée au FESTIVAL NIKON 2025."
+          }
+        ]
+      },
+      {
+        "id": "proj-3",
+        "track": "V2",
+        "title": "Alice",
+        "year": "2025",
+        "role": "Motion Designer & Monteur Vidéo",
+        "category": "Publicité",
+        "client": "EN AVANT TOUTE(S) & COMMENT ON S'AIME ?",
+        "duration": "00:02:45",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#7ee0d3",
+        "tools": [
+          "After Effects",
+          "Premiere Pro"
+        ],
+        "context": "Montage Vidéo & Motion Design de la publicité créée pour les associations 'EN AVANT TOUTE(S)' & 'COMMENT ON S'AIME ?'. Cette même publicité a été également diffusée sur certaines chaînes TV.",
+        "videos": [
+          {
+            "youtubeId": "https://youtu.be/o0RMo2iq9X0",
+            "title": "ALICE - 1,30min 16x9",
+            "duration": "01:30",
+            "description": "Version finale diffusée — 1 minute 30."
+          },
+          {
+            "youtubeId": "https://youtu.be/KQwDL7HN7Zk",
+            "title": "ALICE - 1min 16x9",
+            "duration": "01:00",
+            "description": "Version finale diffusée — 1 minute."
+          },
+          {
+            "youtubeId": "https://youtu.be/1GyXZskpPOI",
+            "title": "ALICE - 15sec 16x9",
+            "duration": "00:15",
+            "description": "Version finale diffusée — 15 secondes."
+          }
+        ]
+      },
+      {
+        "id": "proj-4",
+        "track": "V1",
+        "title": "Les Biscuits au Gluten",
+        "year": "2025",
+        "role": "Réalisateur, acteur & aide au montage",
+        "category": "Court métrage",
+        "client": "Personnel",
+        "duration": "00:03:00",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#a8dc78",
+        "tools": [
+          "Premiere Pro"
+        ],
+        "context": "Film inspiré par l'univers de Jacques DEMY.",
+        "videos": [
+          {
+            "youtubeId": "https://youtu.be/MIAD8i10fZE",
+            "title": "Les Biscuits au Gluten",
+            "duration": "03:00",
+            "description": "Film inspiré par l'univers de Jacques DEMY."
+          }
+        ]
+      },
+      {
+        "id": "proj-5",
+        "track": "V1",
+        "title": "MAUDITS - SAUMESA",
+        "year": "2025",
+        "role": "Participation au tournage & Régisseur",
+        "category": "Clip",
+        "client": "SAUMESA",
+        "duration": "00:02:50",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#c48cff",
+        "tools": [
+          "After Effects",
+          "Premiere Pro"
+        ],
+        "context": "Clip réalisé par le chanteur Saumesa pour le son 'MAUDITS'.",
+        "videos": [
+          {
+            "youtubeId": "https://www.youtube.com/watch?v=lxFmetFd7tY",
+            "title": "MAUDITS",
+            "duration": "02:50",
+            "description": "Version définitive du clip — 2 minutes 50."
+          }
+        ]
+      },
+      {
+        "id": "proj-6",
+        "track": "V1",
+        "title": "CLUC",
+        "year": "2023",
+        "role": "Cadreur, Motion Designer & Monteur Vidéo",
+        "category": "STOP MOTION",
+        "client": "CLUC",
+        "duration": "00:00:27",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#78aaff",
+        "tools": [
+          "After Effects",
+          "Premiere Pro"
+        ],
+        "context": "Le CLUC avait fait une requête pour la réalisation de vidéos promotionnelle pour leurs réseaux-sociaux. Mon équipe et moi même avons donc réalisé deux vidéos en Stop Motion mettant en scène des jouets de leur association.",
+        "videos": [
+          {
+            "youtubeId": "https://youtube.com/shorts/x67ktVDjJcU",
+            "title": "Puzzle en STOP MOTION",
+            "duration": "00:13",
+            "description": "Vidéo pour les réseaux-sociaux."
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1H22nYWeuqjQHBzI8lXIYfiWB2wpkKwnH/view?usp=sharing",
+            "title": "Ferme en STOP MOTION",
+            "duration": "00:14",
+            "description": "Vidéo pour les réseaux-sociaux."
+          }
+        ]
+      },
+      {
+        "id": "proj-7",
+        "track": "V2",
+        "title": "PARTICIPATION HAIR BEAUTY AWARDS",
+        "year": "2025",
+        "role": "Motion Designer & Monteur Vidéo",
+        "category": "ALTERNANCE - VIDÉO RÉSEAUX-SOCIAUX",
+        "client": "PROVALLIANCE",
+        "duration": "00:03:01",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#0b0b57",
+        "tools": [
+          "After Effects",
+          "Premiere Pro, Photoshop, Illustrator"
+        ],
+        "context": "Vidéos pour les réseaux-sociaux, réalisées pour inciter les personnes à s'inscrire au concours des HAIR BEAUTY AWARDS.",
+        "videos": [
+          {
+            "youtubeId": "https://youtube.com/shorts/ERS5L3QVrWg",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - INTRO",
+            "duration": "00:06",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtube.com/shorts/DouP9uT6Vbk",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - MEN",
+            "duration": "00:21",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1iUoj5pGPDvWYa-DItMBUZA4oYsaRXK3U/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - AVANT-GARDE",
+            "duration": "00:20",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1UtOSnTMdxTWvjI18XviPsNW9jDPFYtp4/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - CURLY",
+            "duration": "00:20",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1hG750EVg-hB2HZ3-yFxMyvM6f4I6NegL/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - EDITO",
+            "duration": "00:20",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1dg_kLUJ8O_-lQ43KCsNIR987k8MgFk6c/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - AWARDS & GAINS",
+            "duration": "00:37",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1G1iZHzBjMGF-AFdSrES2Ys4JE3vurls6/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - ANNONCE CONCOURS",
+            "duration": "00:12",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1VNHa-Wpd85aCK39TzfErFHASdy_w4o35/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - DATES CLÉS",
+            "duration": "00:24",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1wtD__-Ujiiz55b5in1Pf3BpVMp8-16Nb/view?usp=sharing",
+            "title": "PARTICIPATION HAIR BEAUTY AWARDS - DOSSIER",
+            "duration": "00:21",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": "proj-8",
+        "track": "V2",
+        "title": "RÉSEAUX-SOCIAUX HAIR BEAUTY CAMPUS",
+        "year": "2025",
+        "role": "Motion Designer & Monteur Vidéo",
+        "category": "ALTERNANCE - VIDÉO RÉSEAUX-SOCIAUX",
+        "client": "PROVALLIANCE",
+        "duration": "00:01:32",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#299f00",
+        "tools": [
+          "After Effects",
+          "Premiere Pro, Photoshop, Illustrator"
+        ],
+        "context": "Vidéos pour les réseaux-sociaux, réalisées pour inciter les personnes à s'inscrire au HAIR BEAUTY CAMPUS.",
+        "videos": [
+          {
+            "youtubeId": "https://youtube.com/shorts/_AwIMZmZ3OM",
+            "title": "VIDÉO PROMOTIONNELLE POUR L'HAIR BEAUTY CAMPUS 1",
+            "duration": "00:41",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtube.com/shorts/-7WHSTP3_V8",
+            "title": "VIDÉO PROMOTIONNELLE POUR L'HAIR BEAUTY CAMPUS 2",
+            "duration": "00:51",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": "proj-9",
+        "track": "V2",
+        "title": "ONE PROVALLIANCE 2026 - PARIS LA DEFENSE ARENA / PLENITUDE ARENA",
+        "year": "2026",
+        "role": "Motion Designer & Monteur Vidéo",
+        "category": "Alternance",
+        "client": "PROVALLIANCE",
+        "duration": "03:46:10",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#ff972c",
+        "tools": [
+          "After Effects",
+          "Premiere Pro",
+          "Illustrator",
+          "Photoshop"
+        ],
+        "context": "Chaque année, le groupe PROVALLIANCE organise un Séminaire/Show coiffure pour son siège ainsi que pour ses collaborateurs et les différents coiffeurs des salons voulant participer aux HAIR BEAUTY AWARDS. Cette année, j'ai eu la chance de monter la quasi totalité des vidéos du séminaire se passant à PARIS LA DÉFENSE ARENA ou plus communément renommé par la PLENITUDE ARENA.",
+        "videos": [
+          {
+            "youtubeId": "https://youtu.be/3qobyito_8A",
+            "title": "Logo animé - 7488x1920",
+            "duration": "00:16",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/18b4a1iESHaYkfx07eF8YaaSCGkYsxAeB/view?usp=sharing",
+            "title": "VIDÉO OUVERTURE DU SÉMINAIRE",
+            "duration": "03:12",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1J1pqn7UGF8q42sPvU1Aqi8u6QaMxw6Ga/view?usp=sharing",
+            "title": "Installation + Show de la plénière en accélérée",
+            "duration": "01:46",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/odBABwNBFgs",
+            "title": "Habillage TALKSHOW",
+            "duration": "05:04",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/VHpUa9q4lDM",
+            "title": "HABILLAGE RICHARD RÉ COLONNA D'ISTRIA",
+            "duration": "02:00",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/lNAihcr_zoQ",
+            "title": "HABILLAGE FORUM",
+            "duration": "05:27",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/-EtCYrTc-iY",
+            "title": "ÉCRAN EXTÉRIEUR",
+            "duration": "00:35",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/qOUxZyKGikk",
+            "title": "COCO DE SAX - HABILLAGE ÉCRAN",
+            "duration": "10:01",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/eiKPS_KnGS0",
+            "title": "MAEVA CARTER - HABILLAGE ÉCRAN",
+            "duration": "10:02",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtu.be/0FHZ0CJmLts",
+            "title": "HABILLAGE TEXTE HBA",
+            "duration": "00:35",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://youtube.com/shorts/AkG7Co1FcQw",
+            "title": "MONTAGE BACKSTAGE",
+            "duration": "02:01",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1vaBg8D3nrjCHJqTiazKHPUfpzxXQDkqC/view?usp=sharing",
+            "title": "INNOVATION SOINS ET DISCIPLINENT",
+            "duration": "26:21",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1sefm5-KN9hgwX5qhNckMS8DYhLnGfytk/view?usp=sharing",
+            "title": "INNOVATION CURLY",
+            "duration": "20:37",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1sefm5-KN9hgwX5qhNckMS8DYhLnGfytk/view?usp=sharing",
+            "title": "HUB INNOVATION",
+            "duration": "1:03:03",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1b5BVP_BttpwkyiJinyHb5Ev0GeO_NPv-/view?usp=sharing",
+            "title": "Show HBA 2025 - 7488x1920",
+            "duration": "12:01",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1N-aVb_MGkKQsws8nd9FudN2Pkao-s1bT/view?usp=sharing",
+            "title": "REMISES DE PRIX HBA 2026 - 7488x1920",
+            "duration": "40:30",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/159z8BjnCrGIq1GPMpUScOTXjx6s213za/view?usp=sharing",
+            "title": "FOND DANSEURS 1 - 7488x1920",
+            "duration": "03:30",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1jdFTcJZWnFNe_Z2BdZt8dByzorkS27mz/view?usp=sharing",
+            "title": "PRESTATION DANSEURS 1 AVEC FOND",
+            "duration": "03:51",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/19VnPtLU1Ik4BjAMJWwLTFTDtqZXnncG6/view?usp=sharing",
+            "title": "FOND DANSEURS 2 - 7488x1920",
+            "duration": "02:01",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/14lHysx2JehtQBqg-UUYj2kdkZY6uYCg3/view?usp=sharing",
+            "title": "PRESTATION DANSEURS 2 AVEC FOND",
+            "duration": "03:51",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1LHtsut9oRqGF2iz1wiIpTyIaNSipSRHz/view?usp=sharing",
+            "title": "FOND DANSEURS 3 - 7488x1920",
+            "duration": "04:35",
+            "description": ""
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1zEame7YBhZzxKzHly4SUhd_SUPw2_39J/view?usp=sharing",
+            "title": "PRESTATION DANSEURS 3 AVEC FOND",
+            "duration": "04:51",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "id": "proj-10",
+        "track": "V2",
+        "title": "MULTISCREEN GRAND PRIX",
+        "year": "2026",
+        "role": "Motion Designer & Monteur Vidéo",
+        "category": "MOTION DESIGN & MONTAGE VIDÉO",
+        "client": "MULTISCREEN GRAND PRIX",
+        "duration": "00:54:15",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#0019ff",
+        "tools": [
+          "After Effects",
+          "Premiere Pro"
+        ],
+        "context": "Le MULTISCREEN GRAND PRIX a prit contact pour la réalisation de leurs montages vidéo, pour les transitions lors des repas des invités ainsi que pour leurs interviews.",
+        "videos": [
+          {
+            "youtubeId": "https://drive.google.com/file/d/1mpIJLlUvpWnZhq4KngmdSNCkoPN3Hm8t/view?usp=sharing",
+            "title": "LISTES CONCURRENTS MARQUES - TRANSITION REPAS",
+            "duration": "50:01",
+            "description": "Vidéo nommant toutes les publicités de marques nominées pour le MULTISCREEN GRAND PRIX."
+          },
+          {
+            "youtubeId": "https://drive.google.com/file/d/1W5Mke_ZO5guJLC-sYrzUpH1_NuVcpf2l/view?usp=sharing",
+            "title": "INTERVIEW - ALEX JAFFRAY",
+            "duration": "04:14",
+            "description": "Interview D'Alex JAFFRAY (Fondateur de l'agence de START-REC) interviewé par Lauren SHAW-JACKSON."
+          }
+        ]
+      },
+      {
+        "id": "proj-11",
+        "track": "V1",
+        "title": "DOLORES",
+        "year": "2026",
+        "role": "DIRECTEUR DE PRODUCTION, GRAPHISTE & MOTION DESIGNER",
+        "category": "DOCUMENTAIRE À L'ÉTRANGER",
+        "client": "Personnel",
+        "duration": "00:50:20",
+        "thumbnail": "",
+        "preview": "",
+        "color": "#ff4784",
+        "tools": [
+          "After Effects",
+          "Premiere Pro, Photoshop, Illustrator"
+        ],
+        "context": "Documentaire réalisé au Mexique où nous suivons le passé de DOLORES accompagnée par la chanteuse LEIDEN et montrant ainsi tous les problèmes sur la situtions des femmes au Mexique.",
+        "videos": [
+          {
+            "youtubeId": "",
+            "title": "DOLORES - Documentaire sur la situation des femmes au Mexique.",
+            "duration": "50:01",
+            "description": "Documentaire réalisé au Mexique où nous suivons le passé de DOLORES accompagnée par la chanteuse LEIDEN et montrant ainsi tous les problèmes sur la situtions des femmes au Mexique."
+          },
+          {
+            "youtubeId": "https://youtu.be/9dcZbNo_DN4",
+            "title": "Vidéo CROWDFUNDING - ULULE",
+            "duration": "00:19",
+            "description": "Courte vidéo en motion design pour animer la cagnotte ULULE."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Livraison",
+    "sectionSubtitle": "Un projet en tête ? Une collaboration ? Écrivez-moi.",
+    "email": "gauthier.vadot@gmail.com",
+    "emailLabel": "Envoyer un message",
+    "phone": "",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/gauthier-vadot/",
+        "icon": "linkedin"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/gauthier_vdt/",
+        "icon": "instagram"
+      }
+    ]
+  },
+  "footer": {
+    "credit": "© {{year}} Gauthier Vadot. Tous droits réservés."
+  }
+}

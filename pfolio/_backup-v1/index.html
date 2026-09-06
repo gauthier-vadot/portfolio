@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="site-title">Portfolio</title>
+  <meta name="description" content="Portfolio Animateur 2D & Monteur Vidéo" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo" aria-label="Retour en haut">JD</a>
+      <ul class="nav-links" id="nav-links" role="list"></ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU OVERLAY ── -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu navigation">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-links" id="mobile-nav-links" role="list"></ul>
+      <div class="mobile-menu-footer">
+        <span class="mobile-menu-tagline" id="mobile-menu-tagline"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero" class="section hero" aria-label="Section d'accueil">
+    <video
+      id="hero-video"
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      aria-hidden="true"
+    ></video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content reveal" role="banner">
+      <p class="hero-eyebrow" id="hero-tagline"></p>
+      <h1 class="hero-name" id="hero-name"></h1>
+      <a href="#portfolio" class="btn btn-primary" id="hero-cta"></a>
+    </div>
+    <a href="#about" class="hero-scroll-hint" aria-label="Défiler vers la section suivante">
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+  <!-- ── À PROPOS ── -->
+  <section id="about" class="section about" aria-label="À propos">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <img id="about-photo" src="" alt="" class="about-photo" loading="lazy" />
+          <div class="photo-glow" aria-hidden="true"></div>
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <h2 class="section-title">À Propos</h2>
+          <p class="about-bio" id="about-bio"></p>
+          <div class="skills-grid" id="skills-grid" role="list" aria-label="Logiciels maîtrisés"></div>
+          <a id="about-cv" href="#" class="btn btn-secondary" download></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section id="portfolio" class="section portfolio" aria-label="Portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" id="portfolio-title"></h2>
+        <p class="section-subtitle" id="portfolio-subtitle"></p>
+      </div>
+      <div class="masonry-grid" id="masonry-grid" role="list" aria-label="Grille des projets"></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" id="contact-title"></h2>
+        <p class="section-subtitle" id="contact-subtitle"></p>
+      </div>
+      <div class="contact-body reveal reveal-delay-1">
+        <a id="contact-email-btn" href="#" class="btn btn-primary contact-email"></a>
+        <div class="socials" id="socials" role="list" aria-label="Réseaux sociaux"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <p id="footer-credit"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

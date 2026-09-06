@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "siteTitle": "John Doe — Animateur 2D & Monteur Vidéo",
+    "lang": "fr"
+  },
+  "nav": [
+    { "label": "Accueil",   "target": "hero" },
+    { "label": "À propos",  "target": "about" },
+    { "label": "Portfolio", "target": "portfolio" },
+    { "label": "Contact",   "target": "contact" }
+  ],
+  "hero": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "tagline": "Animateur 2D & Monteur Vidéo",
+    "ctaLabel": "Voir mes travaux",
+    "ctaTarget": "portfolio",
+    "showreelUrl": "https://www.w3schools.com/html/mov_bbb.mp4"
+  },
+  "about": {
+    "photo": "assets/profile.jpg",
+    "photoAlt": "Photo de profil John Doe",
+    "bio": "Passionné par la narration visuelle depuis plus de 8 ans, je crée des animations 2D expressives et monte des vidéos qui captivent. Mon objectif : donner vie à chaque histoire avec précision, rythme et émotion.",
+    "skills": [
+      { "name": "After Effects", "icon": "assets/icons/ae.svg" },
+      { "name": "Premiere Pro",  "icon": "assets/icons/pr.svg" },
+      { "name": "Illustrator",   "icon": "assets/icons/ai.svg" },
+      { "name": "Toon Boom",     "icon": "assets/icons/tb.svg" },
+      { "name": "DaVinci Resolve","icon": "assets/icons/dv.svg" },
+      { "name": "Blender",       "icon": "assets/icons/bl.svg" }
+    ],
+    "cvUrl": "assets/cv-johndoe.pdf",
+    "cvLabel": "Télécharger mon CV"
+  },
+  "portfolio": {
+    "sectionTitle": "Mes Projets",
+    "sectionSubtitle": "Une sélection de réalisations en animation 2D et montage vidéo.",
+    "projects": [
+      {
+        "id": "proj-1",
+        "title": "Showreel 2024",
+        "year": "2024",
+        "role": "Animation 2D / Montage",
+        "category": "Showreel",
+        "thumbnail": "assets/thumbs/showreel-2024.jpg",
+        "context": "Compilation annuelle de mes meilleures réalisations, mettant en avant la diversité de mon style et mes compétences techniques en animation frame-by-frame et motion design.",
+        "videos": [
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Showreel complet 2024",
+            "description": "Version intégrale du showreel — 3 minutes de réalisations."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Version courte — 60s",
+            "description": "Cut condensé pour une présentation rapide."
+          }
+        ]
+      },
+      {
+        "id": "proj-2",
+        "title": "Spot Publicitaire — BrandX",
+        "year": "2023",
+        "role": "Animateur 2D & Directeur Artistique",
+        "category": "Publicité",
+        "thumbnail": "assets/thumbs/brandx.jpg",
+        "context": "Conception et animation d'un spot publicitaire de 30 secondes pour le lancement du nouveau produit BrandX. Travail sur le storyboard, le character design et l'animation finale.",
+        "videos": [
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Spot TV — version 30s",
+            "description": "Version diffusée en télévision."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Spot digital — version 15s",
+            "description": "Cut optimisé pour les réseaux sociaux."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Making-of & process",
+            "description": "Coulisses de la production : storyboard, animatique et rendu final."
+          }
+        ]
+      },
+      {
+        "id": "proj-3",
+        "title": "Court-Métrage — \"Éclipse\"",
+        "year": "2023",
+        "role": "Monteur Vidéo",
+        "category": "Court-Métrage",
+        "thumbnail": "assets/thumbs/eclipse.jpg",
+        "context": "Montage du court-métrage de fiction \"Éclipse\" (12 min). Travail sur le rythme narratif, l'étalonnage colorimétrique et le sound design pour une ambiance post-apocalyptique.",
+        "videos": [
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Film complet",
+            "description": "Version finale diffusée en festival — 12 minutes."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Bande-annonce officielle",
+            "description": "Trailer de 90 secondes."
+          }
+        ]
+      },
+      {
+        "id": "proj-4",
+        "title": "Série Éducative — Sciencia",
+        "year": "2022",
+        "role": "Animation 2D / Motion Design",
+        "category": "Éducatif",
+        "thumbnail": "assets/thumbs/sciencia.jpg",
+        "context": "Création de 10 épisodes animés de 3 minutes pour une plateforme éducative en ligne. Focus sur la pédagogie visuelle, les infographies animées et le character design accessible.",
+        "videos": [
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Épisode 1 — Introduction",
+            "description": "Premier épisode de la série : mise en place du personnage et du ton."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Épisode 2 — Les atomes",
+            "description": "Visualisation animée de la structure atomique."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Épisode 3 — La lumière",
+            "description": "Explication du spectre lumineux et de la réfraction."
+          }
+        ]
+      },
+      {
+        "id": "proj-5",
+        "title": "Clip Musical — \"Aurora\"",
+        "year": "2022",
+        "role": "Réalisateur & Animateur",
+        "category": "Clip",
+        "thumbnail": "assets/thumbs/aurora.jpg",
+        "context": "Clip animé intégralement en 2D pour l'artiste Aurora. Illustration d'un univers onirique avec une technique de rotoscopie numérique combinée à une animation traditionnelle.",
+        "videos": [
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Clip officiel",
+            "description": "Version définitive du clip — 4 minutes."
+          }
+        ]
+      },
+      {
+        "id": "proj-6",
+        "title": "Motion Design — Finance Corp",
+        "year": "2021",
+        "role": "Motion Designer",
+        "category": "Motion Design",
+        "thumbnail": "assets/thumbs/finance.jpg",
+        "context": "Vidéo de présentation institutionnelle de 2 minutes pour Finance Corp. Animation de data-visualisation, infographies dynamiques et transitions fluides pour un rendu corporate haut de gamme.",
+        "videos": [
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Présentation institutionnelle",
+            "description": "Version complète — 2 minutes."
+          },
+          {
+            "youtubeId": "dQw4w9WgXcQ",
+            "title": "Extrait — data visualisation",
+            "description": "Focus sur la séquence d'infographies animées."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Travaillons Ensemble",
+    "sectionSubtitle": "Un projet en tête ? Une collaboration ? Écrivez-moi.",
+    "email": "john.doe@email.com",
+    "emailLabel": "M'envoyer un email",
+    "socials": [
+      { "name": "LinkedIn",  "url": "https://linkedin.com/in/johndoe",   "icon": "linkedin" },
+      { "name": "Vimeo",     "url": "https://vimeo.com/johndoe",         "icon": "vimeo" },
+      { "name": "YouTube",   "url": "https://youtube.com/@johndoe",      "icon": "youtube" },
+      { "name": "Instagram", "url": "https://instagram.com/johndoe",     "icon": "instagram" },
+      { "name": "Behance",   "url": "https://behance.net/johndoe",       "icon": "behance" }
+    ]
+  },
+  "footer": {
+    "credit": "© 2024 John Doe. Tous droits réservés."
+  }
+}

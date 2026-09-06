@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Projet — Portfolio</title>
+  <meta name="description" content="Détail du projet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="project-page">
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar" class="scrolled" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html#portfolio" class="nav-logo" id="nav-logo" aria-label="Retour au portfolio">JD</a>
+      <a href="index.html#portfolio" class="nav-back-link" aria-label="Retour au portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Retour au portfolio
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── CONTENT (populated by JS) ── -->
+  <main id="project-main" class="project-main">
+
+    <!-- Hero banner -->
+    <header class="project-hero" id="project-hero">
+      <div class="project-hero-bg" id="project-hero-bg" aria-hidden="true"></div>
+      <div class="project-hero-overlay" aria-hidden="true"></div>
+      <div class="container project-hero-content">
+        <span class="pj-category" id="pj-category"></span>
+        <h1 class="pj-title" id="pj-title"></h1>
+        <div class="pj-meta">
+          <span id="pj-year"></span>
+          <span class="pj-sep">·</span>
+          <span id="pj-role"></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <!-- ── MAIN PLAYER ── -->
+      <section class="pj-player-section" aria-label="Lecteur vidéo">
+        <div class="pj-main-player">
+          <div class="pj-player-frame" id="pj-player-frame">
+            <!-- iframe injected by JS -->
+          </div>
+        </div>
+        <!-- Current video info (title + description) -->
+        <div class="pj-player-info">
+          <p class="pj-video-label" id="pj-video-label">
+            <span class="pj-video-index" id="pj-video-index"></span>
+            <span class="pj-video-title" id="pj-video-title"></span>
+          </p>
+          <p class="pj-video-desc" id="pj-video-desc"></p>
+        </div>
+      </section>
+
+      <!-- ── PLAYLIST (hidden when only 1 video) ── -->
+      <section class="pj-playlist-section" id="pj-playlist-section" aria-label="Liste des vidéos">
+        <h2 class="pj-playlist-heading" id="pj-playlist-heading"></h2>
+        <div class="pj-playlist" id="pj-playlist" role="list"></div>
+      </section>
+
+      <!-- ── PROJECT CONTEXT ── -->
+      <section class="pj-context-section" aria-label="À propos du projet">
+        <div class="pj-context-grid">
+          <div class="pj-context-text">
+            <h2 class="pj-context-heading">À propos du projet</h2>
+            <p id="pj-context"></p>
+          </div>
+          <div class="pj-context-meta-card">
+            <dl class="pj-details-list" id="pj-details-list"></dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── NAVIGATION BETWEEN PROJECTS ── -->
+      <nav class="pj-prev-next" id="pj-prev-next" aria-label="Navigation entre projets">
+        <a href="#" class="pj-nav-btn" id="pj-prev" aria-label="Projet précédent" hidden></a>
+        <a href="index.html#portfolio" class="pj-nav-center btn btn-secondary">Tous les projets</a>
+        <a href="#" class="pj-nav-btn pj-nav-btn--next" id="pj-next" aria-label="Projet suivant" hidden></a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <p id="footer-credit"></p>
+  </footer>
+
+  <!-- ── ERROR STATE ── -->
+  <div id="project-error" class="pj-error">
+    <h2>Projet introuvable</h2>
+    <p>Ce projet n'existe pas ou a été supprimé.</p>
+    <a href="index.html#portfolio" class="btn btn-primary">Retour au portfolio</a>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>

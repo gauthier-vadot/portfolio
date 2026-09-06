@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Projet</title>
+  <meta name="description" id="meta-desc" content="" />
+  <meta name="theme-color" content="#0b0b0d" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="page-project">
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-label" id="cursor-label"></div>
+  </div>
+
+  <!-- ═══ BARRE SUPÉRIEURE ═══ -->
+  <header class="topbar" role="banner">
+    <a href="index.html" class="tb-brand" aria-label="Retour à l'accueil">
+      <span class="rec-dot" aria-hidden="true"></span>
+      <span class="tb-initials" id="tb-initials"></span>
+    </a>
+    <span class="tb-seq" id="tb-seq"></span>
+    <span class="tb-spacer"></span>
+    <a href="index.html#timeline" class="pj-back" data-cursor="link">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 7H4.8l3.6-3.6L7 2 1 8l6 6 1.4-1.4L4.8 9H14z"/></svg>
+      <span>Retour à la timeline</span>
+    </a>
+    <span class="tb-tc tc" id="tb-tc">00:00:00:00</span>
+  </header>
+
+  <!-- ═══ CONTENU ═══ -->
+  <main class="stage" id="stage" hidden>
+
+    <!-- Fil d'ariane / bandeau -->
+    <div class="wrap">
+      <div class="pj-crumb">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html#timeline">Timeline</a>
+        <span aria-hidden="true">/</span>
+        <span id="pj-crumb-current"></span>
+      </div>
+
+      <header class="pj-head">
+        <div class="pj-head-l">
+          <div class="pj-tags" id="pj-tags"></div>
+          <h1 class="pj-title" id="pj-title"></h1>
+          <p class="pj-role" id="pj-role"></p>
+        </div>
+        <div class="pj-head-r" id="pj-head-meta"></div>
+      </header>
+    </div>
+
+    <!-- Moniteur source + bin -->
+    <div class="wrap">
+      <div class="pj-grid">
+
+        <section class="pj-monitor" aria-label="Lecteur vidéo">
+          <div class="mon-bar">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="lbl">MONITEUR SOURCE</span>
+            <span class="right"><span id="pj-clip-code"></span></span>
+          </div>
+          <div class="pj-player" id="pj-player"></div>
+          <div class="pj-notice" id="pj-notice" role="status" hidden></div>
+          <div class="pj-nowplaying">
+            <div class="pj-np-l">
+              <span class="pj-np-idx" id="pj-np-idx"></span>
+              <h2 class="pj-np-title" id="pj-np-title"></h2>
+            </div>
+            <span class="pj-np-dur tc" id="pj-np-dur"></span>
+          </div>
+          <p class="pj-np-desc" id="pj-np-desc"></p>
+        </section>
+
+        <aside class="pj-bin" id="pj-bin-wrap" aria-label="Liste des vidéos du projet">
+          <div class="pj-bin-head">
+            <span id="pj-bin-title">CHUTIER</span>
+            <span id="pj-bin-count"></span>
+          </div>
+          <div class="pj-bin-list" id="pj-bin" role="list"></div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- Inspecteur -->
+    <div class="wrap">
+      <section class="pj-inspector" aria-label="Informations sur le projet">
+        <div class="pj-insp-l">
+          <h2 class="pj-insp-title">Note de production</h2>
+          <p id="pj-context"></p>
+          <div class="pj-tools" id="pj-tools"></div>
+        </div>
+        <div class="pj-insp-r">
+          <div class="pj-insp-head">MÉTADONNÉES</div>
+          <dl class="pj-dl" id="pj-dl"></dl>
+        </div>
+      </section>
+    </div>
+
+    <!-- Clips adjacents -->
+    <div class="wrap">
+      <nav class="pj-adj" aria-label="Navigation entre projets">
+        <a class="pj-adj-btn" id="pj-prev" href="#" hidden>
+          <span class="k">◀ CLIP PRÉCÉDENT</span>
+          <span class="t"></span>
+        </a>
+        <a class="pj-adj-all" href="index.html#timeline" data-cursor="link">TOUTE LA TIMELINE</a>
+        <a class="pj-adj-btn pj-adj-btn--next" id="pj-next" href="#" hidden>
+          <span class="k">CLIP SUIVANT ▶</span>
+          <span class="t"></span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- État d'erreur -->
+  <div class="stage" id="pj-error" hidden>
+    <div class="wrap">
+      <div class="load-error">
+        <h2>Clip introuvable</h2>
+        <p id="pj-error-msg">Ce projet n'existe pas ou l'identifiant est incorrect.</p>
+        <a class="btn" href="index.html#timeline" style="margin-top:18px"><span>Retour à la timeline</span></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot" role="contentinfo">
+    <span id="foot-credit"></span>
+    <span id="foot-right"></span>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
