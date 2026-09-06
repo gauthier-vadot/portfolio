@@ -1,10 +1,10 @@
 {
   "meta": {
-    "siteTitle": "Gauthier Vadot — MOTION DESIGNER & Monteur Vidéo",
+    "siteTitle": "Gauthier Vadot — Portfolio",
     "description": "Portfolio de motion design et de montage vidéo. Publicités, courts-métrages, animation en motion design, et plus encore.",
     "lang": "fr",
     "initials": "GV",
-    "sequenceName": "PORTFOLIO_GAUTHIER_VADOT_MASTER.seq",
+    "sequenceName": "PORTFOLIO_GAUTHIER_VADOT.seq",
     "accent": "#ff4b1f"
   },
   "nav": [
@@ -699,7 +699,7 @@
       {
         "id": "proj-10",
         "track": "V2",
-        "title": "MULTISCREEN GRAND PRIX",
+        "title": "MULTISCREEN GRAND PRIX 2026",
         "year": "2026",
         "role": "Motion Designer & Monteur Vidéo",
         "category": "MOTION DESIGN & MONTAGE VIDÉO",
@@ -712,7 +712,7 @@
           "After Effects",
           "Premiere Pro"
         ],
-        "context": "Le MULTISCREEN GRAND PRIX a prit contact pour la réalisation de leurs montages vidéo, pour les transitions lors des repas des invités ainsi que pour leurs interviews.",
+        "context": "Le MULTISCREEN GRAND PRIX a pris contact pour la réalisation de leurs montages vidéo, pour les transitions lors des repas des invités ainsi que pour leurs interviews.",
         "videos": [
           {
             "youtubeId": "https://drive.google.com/file/d/1mpIJLlUvpWnZhq4KngmdSNCkoPN3Hm8t/view?usp=sharing",
